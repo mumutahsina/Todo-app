@@ -1,0 +1,158 @@
+/* Reset + font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #d3d3d3; /* light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.center-btn {
+  display: block;
+  margin: 20px auto; /* auto left & right = center */
+}
+
+
+/* Center box for login/signup/todo */
+.signup-login {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.signup-box {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Heading and line */
+.heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: #ddd;
+  margin: 1rem 0;
+}
+
+/* Form fields */
+.field {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+.field b {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.inp {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.inp:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Buttons */
+.submit-button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #f5f5f5, #3a3d98);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3a3d98, #f5f5f5);
+}
+
+/* Links */
+.anc {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 700; /* change from 600 to 700 for bolder text */
+}
+
+.anc:hover {
+  text-decoration: underline;
+}
+
+/* Todo page */
+.src {
+  margin-top: 1rem;
+}
+
+.Todo {
+  background: #f9f9f9;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.Todo p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Todo buttons */
+.todo-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  margin-left: 0.3rem;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+}
+.edit-btn:hover {
+  background: linear-gradient(135deg, #2e7d32, #4CAF50);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #f44336, #c62828);
+}
+.delete-btn:hover {
+  background: linear-gradient(135deg, #c62828, #f44336);
+}
+
+/* Delete page buttons */
+button.submit-button {
+  margin-right: 0.5rem;
+}

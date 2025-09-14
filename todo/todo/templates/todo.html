@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do Lists</title>
+
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+
+    
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    
+    <script src="https://kit.fontawesome.com/cb79c0850.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="signup-login">
+        <div>
+            <h1>Hello {{user}}</h1>
+        </div>
+            <div class="signup-box src">
+                
+               
+                 <form method="post">
+                {% csrf_token %}
+                     <input type="text" class="inp" placeholder="Add Tasks" name="title">
+                     <div class="line"></div>
+                     
+                     <button>Add the task</button>
+            </div>
+                </form>
+                {% for todo in res %}
+            
+                <div class="Todo">
+                   
+                    <p>{{todo.title}}</p>
+                    <div>
+                      <a href="/edit_todo/{{ todo.srno }}" class="todo-btn edit-btn">Edit</a>
+                      <a href="/delete_todo/{{ todo.srno }}" class="todo-btn delete-btn">Delete</a>
+
+                    </div>
+                  
+                {% endfor %}
+
+
+                 <div class="anca"><a href="{% url 'signout' %}" class="sign">Logout
+                </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
